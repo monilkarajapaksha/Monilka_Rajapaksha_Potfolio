@@ -55,7 +55,7 @@ const services = [
   },
   {
     title: "UI UX Designer",
-    icon: f,
+    icon: figma,
   },
   {
     title: "Content Creator",
