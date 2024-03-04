@@ -2,8 +2,9 @@ import React from 'react'
 import {Tilt} from 'react-tilt'
 import {motion} from 'framer-motion';
 import { styles } from '../style';
-import {services} from '../constants';
+import { services} from '../constants/index.js';
 import {fadeIn,textVariant} from '../utils/motion';
+import {SectionWrapper} from '../hoc';
 
 
 const ServiceCard = ({title,index,icon}) => {
@@ -21,7 +22,7 @@ const ServiceCard = ({title,index,icon}) => {
         className=' bg-tertiary rounded-[20px] py- px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
           <img src={icon} alt={title} 
           className=" w-16 h-16 object-contain" />
-          <h3 className=' text-white text-20px'>{title}</h3>
+          <h3 className=' text-white text-[20px] font-bold text-center'>{title}</h3>
         </div>
       </motion.div>
     </Tilt>
@@ -57,4 +58,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SectionWrapper(About,"about")
